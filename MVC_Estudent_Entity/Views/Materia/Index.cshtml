@@ -1,0 +1,47 @@
+﻿@model List<MVC_Estudent_Entity.Models.ModelView.Materia_Tabla_ModelView>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div style="text-align:right">
+    <a href=@Url.Action("Create","Materia")><i class="fas fa-plus-square"></i></a>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table ">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Materia</th>
+                    <th>Creditos</th>
+                    <th>Profesor</th>
+                    <th>Nombre Estudiante</th>
+                    <th>Matricula</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id_materia</td>
+                        <td>@item.Materia1</td>
+                        <td>@item.Creditos</td>
+                        <td>@item.Profesor</td>
+                        <td>@item.NombreEstudiante</td>
+                        <td>@item.Matricula</td>
+                    </tr>
+
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+
+

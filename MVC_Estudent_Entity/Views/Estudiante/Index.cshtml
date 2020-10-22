@@ -1,0 +1,55 @@
+﻿@model List<MVC_Estudent_Entity.Models.ModelView.Estudiante_Tabla_ModelView>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<div style="text-align:right">
+    <a href=@Url.Action("Create","Estudiante",new { id=0})><i class="fas fa-plus-square"></i></a>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table ">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Matricula</th>
+                    <th>Nombre Completo</th>
+                    <th>Edad</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Fecha Registro</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                <tr>
+                    <td>@item.Id_estudiantes</td>
+                    <td>@item.Matricula</td>
+                    <td>@item.Nombre</td>
+                    <td>@item.Edad</td>
+                    <td>@item.Fecha_nacimietno</td>
+                    <td>@item.Fecha_registro</td>
+                    <td>
+                        <a class="btn btn-success" href="@Url.Action("Create","Estudiante")/@item.Id_estudiantes">Editar</a>
+                        <a class="btn btn-danger" href="@Url.Action("Eliminar","Estudiante")/@item.Id_estudiantes">Eliminar</a>
+                        <a class="btn btn-primary" href="@Url.Action("Seleccionar","Estudiante")/@item.Id_estudiantes">Seleccionar</a>
+                    </td>
+                </tr>
+
+                }
+            </tbody>
+            
+        </table>
+    </div>
+
+</div>
+
+
+
+

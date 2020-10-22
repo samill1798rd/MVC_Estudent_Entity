@@ -1,0 +1,33 @@
+﻿@model MVC_Estudent_Entity.Models.ModelView.Entidad_Materias_ModelView
+@{
+    ViewBag.Title = "Crear Materia";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Save", "Materia", FormMethod.Post))
+{
+<div class="row">
+    <div class="form-group">
+        @Html.LabelFor(d => d.Materia1)
+        @Html.DropDownListFor(d => d.Materia1,Model.DdlMaterias,new {  @class = "form-control"})
+    </div>
+    <div>
+        @Html.LabelFor(d => d.Creditos)
+        @Html.TextBoxFor(d => d.Creditos, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(d => d.Profesor)
+        @Html.TextBoxFor(d => d.Profesor, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(d => d.Estudiantes_Id)
+        @Html.TextBoxFor(d => d.Estudiantes_Id, new { @class = "form-control" })
+    </div>
+    <br />
+    <input value="Guardar" type="submit" class="btn btn-primary">
+</div>
+}
+
+
+
