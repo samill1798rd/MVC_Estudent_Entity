@@ -113,7 +113,6 @@ namespace MVC_Estudent_Entity.Controllers
            
         }
 
-       
         public object Editar(int Id)
         {
             var model = new Entidad_Estudiantes_ModelView();
