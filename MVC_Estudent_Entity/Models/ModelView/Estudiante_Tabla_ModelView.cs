@@ -10,9 +10,19 @@ namespace MVC_Estudent_Entity.Models.ModelView
         public int Id_estudiantes { get; set; }
         public string Matricula { get; set; }
         public string Nombre { get; set; }
-        public Nullable<int> Edad { get; set; }
-        public Nullable<DateTime>  Fecha_nacimietno { get; set; }
-        public Nullable<DateTime> Fecha_registro { get; set; }
-        public virtual ICollection<Materia> Materias { get; set; }
+        public int ?Edad { get; set; }
+        public DateTime  ?Fecha_nacimietno { get; set; }
+        public DateTime ?Fecha_registro { get; set; }
+        public virtual Materia Materia { get; set; }
+
+        public string Materia1 { get; set; }
+
+        public int ?Creditos { get; set; }
+
+        public string Profesor { get; set; }
+
+
+
+
     }
 }

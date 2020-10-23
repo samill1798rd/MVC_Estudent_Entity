@@ -36,6 +36,10 @@ namespace MVC_Estudent_Entity.Models.ModelView
         [DataType(DataType.Date)]
         [Display(Name = "Fecha_registro")]
         public DateTime ?Fecha_registro { get; set; }
+
+        public int Materia_Id { get; set; }
+
+        public virtual Materia Materia { get; set; }
         
     }
 }

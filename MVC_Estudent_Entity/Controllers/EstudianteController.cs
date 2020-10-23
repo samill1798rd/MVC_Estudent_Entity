@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using MVC_Estudent_Entity.Models.ModelView;
 using MVC_Estudent_Entity.Models;
 using System.Web.Services.Description;
+using System.Data.Entity;
 
 namespace MVC_Estudent_Entity.Controllers
 {
@@ -20,7 +21,7 @@ namespace MVC_Estudent_Entity.Controllers
             using (var db = new estudiantesEntities1())
             {
 
-                list = (from d in db.Estudiantes
+                list = (from d in db.Estudiantes.Include(t=>t.Materia)
 
                         select new Estudiante_Tabla_ModelView
                         {
@@ -30,6 +31,12 @@ namespace MVC_Estudent_Entity.Controllers
                             Edad = d.edad,
                             Fecha_nacimietno = d.fecha,
                             Fecha_registro =d.fecha_registro,
+                            Materia1 = d.Materia.materia1,
+                            Creditos = d.Materia.creditos,
+                            Profesor = d.Materia.profesor
+
+
+
                             
 
                         } ).ToList(); 
@@ -80,6 +87,7 @@ namespace MVC_Estudent_Entity.Controllers
                         tb.fecha = Model.Fecha_nacimiento;
                         tb.fecha_registro = DateTime.Now;
                         tb.Id_estudiantes = Model.Id_estudiantes;
+                        tb.Materia_Id = Model.Materia_Id;
                     
 
                     if (Model.Id_estudiantes != 0) {
