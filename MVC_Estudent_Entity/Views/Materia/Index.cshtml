@@ -21,19 +21,24 @@
                     <th>Profesor</th>
                     <th>Nombre Estudiante</th>
                     <th>Matricula</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td>@item.Id_materia</td>
-                        <td>@item.Materia1</td>
-                        <td>@item.Creditos</td>
-                        <td>@item.Profesor</td>
-                        <td>@item.NombreEstudiante</td>
-                        <td>@item.Matricula</td>
-                    </tr>
+                <tr>
+                    <td>@item.Id_materia</td>
+                    <td>@item.Materia1</td>
+                    <td>@item.Creditos</td>
+                    <td>@item.Profesor</td>
+                    <td>@item.NombreEstudiante</td>
+                    <td>@item.Matricula</td>
+                    <td>
+                        <a class="btn btn-success" href="@Url.Action("Create","Materia")/@item.Id_materia">Editar</a>
+                        <a class="btn btn-danger" href="@Url.Action("Eliminar","Materia")/@item.Id_materia">Eliminar</a>
+                    </td>
+                </tr>
 
                 }
             </tbody>

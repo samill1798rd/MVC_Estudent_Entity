@@ -105,6 +105,21 @@ namespace MVC_Estudent_Entity.Controllers
 
 
         }
+
+
+        public ActionResult Eliminar(int id)
+        {
+            
+            using (var db = new estudiantesEntities1())
+            {
+                var tb = db.Materias.Find(id);
+                db.Materias.Remove(tb);
+                db.SaveChanges();
+            }
+
+
+            return RedirectToAction("Index","Materia");
+        }
         
 
     }
