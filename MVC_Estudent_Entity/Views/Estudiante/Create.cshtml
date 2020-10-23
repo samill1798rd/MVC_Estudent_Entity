@@ -28,12 +28,17 @@
 
             @if (Model != null)
             {
-                if (Model.Id_estudiantes > 0) {
-                <div class="form-group">
-                    @Html.LabelFor(d => d.Materia_Id)
-                    @Html.DropDownListFor(d => d.Materia_Id,ViewBag.MateriaList as SelectList)
-                </div>
-                 }
+                if (Model.Id_estudiantes > 0)
+                {
+                    <div class="form-group">
+                        @Html.LabelFor(d => d.Materia_Id)
+                        @Html.DropDownListFor(d => d.Materia_Id, ViewBag.MateriaList as SelectList)
+                    </div>
+                }
+            }
+            else
+            {
+                @Html.HiddenFor(d => d.Materia_Id)
             }
 
 

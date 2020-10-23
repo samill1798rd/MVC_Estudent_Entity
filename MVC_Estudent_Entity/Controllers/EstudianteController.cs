@@ -97,13 +97,14 @@ namespace MVC_Estudent_Entity.Controllers
                         tb.edad = Model.Edad;
                         tb.fecha = Model.Fecha_nacimiento;
                         tb.fecha_registro = DateTime.Now;
-                        tb.Id_estudiantes = Model.Id_estudiantes;
-                        tb.Materia_Id = Model.Materia_Id;
+                        
                     
 
                     if (Model.Id_estudiantes != 0) {
 
-                     //   db.Estudiantes.Add(tb);
+                        //   db.Estudiantes.Add(tb);
+                        tb.Id_estudiantes = Model.Id_estudiantes;
+                        tb.Materia_Id = Model.Materia_Id;
 
                         db.Entry(tb).State = System.Data.Entity.EntityState.Modified;
                         
