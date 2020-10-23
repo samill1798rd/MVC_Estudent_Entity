@@ -75,16 +75,17 @@ namespace MVC_Estudent_Entity.Controllers
                 using (var db = new estudiantesEntities1())
                 {
                     var tb = new Materia();
+
+                    tb.Id_materia = Model.Id_Materia;
                     tb.materia1 = Model.Materia1;
                     tb.creditos = Model.Creditos;
                     tb.profesor = Model.Profesor;
                     tb.Estudiante_Id = Model.Estudiantes_Id;
-     
 
 
-                
 
-           
+
+
                         db.Materias.Add(tb);
                         db.SaveChanges();
 
