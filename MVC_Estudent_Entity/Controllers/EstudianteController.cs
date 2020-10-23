@@ -12,7 +12,7 @@ namespace MVC_Estudent_Entity.Controllers
 {
     public class EstudianteController : Controller
     {
-
+        
         // GET: Estudiante
         public ActionResult Index()
         {
@@ -60,12 +60,23 @@ namespace MVC_Estudent_Entity.Controllers
         }
         public ActionResult Create(int id)
         {
+            
             if (id == 0)
             {
                 return View();
             }
             else
             {
+                var db = new estudiantesEntities1();
+
+                var MateriaList = db.Materias.ToList();
+
+                ViewBag.MateriaList = new SelectList(MateriaList, "Id_materia" ,"materia1");
+
+
+
+
+
                 var model = Editar(id);
                 return View(model);
             }

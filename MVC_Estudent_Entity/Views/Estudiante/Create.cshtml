@@ -31,7 +31,7 @@
                 if (Model.Id_estudiantes > 0) {
                 <div class="form-group">
                     @Html.LabelFor(d => d.Materia_Id)
-                    @Html.EditorFor(d => d.Materia_Id, new { @class = "form-control" })
+                    @Html.DropDownListFor(d => d.Materia_Id,ViewBag.MateriaList as SelectList)
                 </div>
                  }
             }

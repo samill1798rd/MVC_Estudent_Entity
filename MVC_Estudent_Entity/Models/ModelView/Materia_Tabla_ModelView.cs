@@ -9,14 +9,14 @@ namespace MVC_Estudent_Entity.Models.ModelView
     {
         public int Id_materia { get; set; }
         public string Materia1 { get; set; }
-        public Nullable<int> Creditos { get; set; }
+        public int ?Creditos { get; set; }
         public string Profesor { get; set; }
-        public Nullable<int> Estudiantes_Id { get; set; }
+        public int ?Estudiantes_Id { get; set; }
 
         public string NombreEstudiante { get; set; }
         public string Matricula { get; set; }
 
-        public Nullable<int> estudiante_Id { get; set; }
+        public int ?estudiante_Id { get; set; }
 
         public virtual ICollection<Estudiante> Estudiantes { get; set; }
         public virtual Estudiante Estudiante { get; set; }
