@@ -38,13 +38,17 @@
                     <td>@item.Edad</td>
                     <td>@item.Fecha_nacimietno</td>
                     <td>@item.Fecha_registro</td>
+                    <td>@item.Materia1</td>
+                    <td>@item.Creditos</td>
+                    <td>@item.Profesor</td>
+                    <td></td>
 
-             
+
 
                     <td>
                         <a class="btn btn-success" href="@Url.Action("Create","Estudiante")/@item.Id_estudiantes">Editar</a>
                         <a class="btn btn-danger" href="@Url.Action("Eliminar","Estudiante")/@item.Id_estudiantes">Eliminar</a>
-                        <a class="btn btn-primary" href="@Url.Action("Seleccionar","Estudiante")/@item.Id_estudiantes">Seleccionar</a>
+                        
                     </td>
                 </tr>
 

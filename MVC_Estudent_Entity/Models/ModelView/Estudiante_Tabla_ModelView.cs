@@ -21,6 +21,8 @@ namespace MVC_Estudent_Entity.Models.ModelView
 
         public string Profesor { get; set; }
 
+        public int ?Materia_Id { get; set; }
+
 
 
 

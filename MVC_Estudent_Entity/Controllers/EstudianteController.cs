@@ -31,6 +31,7 @@ namespace MVC_Estudent_Entity.Controllers
                             Edad = d.edad,
                             Fecha_nacimietno = d.fecha,
                             Fecha_registro =d.fecha_registro,
+                            Materia_Id = d.Materia.Id_materia,
                             Materia1 = d.Materia.materia1,
                             Creditos = d.Materia.creditos,
                             Profesor = d.Materia.profesor
