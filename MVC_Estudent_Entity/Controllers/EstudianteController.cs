@@ -35,14 +35,7 @@ namespace MVC_Estudent_Entity.Controllers
                             Materia1 = d.Materia.materia1,
                             Creditos = d.Materia.creditos,
                             Profesor = d.Materia.profesor
-
-
-
-                            
-
                         } ).ToList(); 
-
-                    
             }
             return View(list);
         }
@@ -72,11 +65,7 @@ namespace MVC_Estudent_Entity.Controllers
 
                 var MateriaList = db.Materias.ToList();
 
-                ViewBag.MateriaList = new SelectList(MateriaList, "Id_materia" ,"materia1");
-
-
-
-
+                ViewBag.MateriaList = new SelectList(MateriaList, "Id_materia" ,"materia1","profesor");
 
                 var model = Editar(id);
                 return View(model);

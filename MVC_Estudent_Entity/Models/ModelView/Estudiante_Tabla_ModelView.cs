@@ -13,7 +13,6 @@ namespace MVC_Estudent_Entity.Models.ModelView
         public int ?Edad { get; set; }
         public DateTime  ?Fecha_nacimietno { get; set; }
         public DateTime ?Fecha_registro { get; set; }
-        public virtual Materia Materia { get; set; }
 
         public string Materia1 { get; set; }
 
@@ -22,9 +21,5 @@ namespace MVC_Estudent_Entity.Models.ModelView
         public string Profesor { get; set; }
 
         public int ?Materia_Id { get; set; }
-
-
-
-
     }
 }
